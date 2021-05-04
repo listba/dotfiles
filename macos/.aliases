@@ -1,10 +1,20 @@
 alias cat="bat"
+alias ls="ls -G"
+
+alias fd="find . -type d -name"
+alias ff="find . -type f -name"
+alias grep="grep --color"
+
+alias unexport="unset"
+
+alias gle="git remote get-url origin | sed 's/github/gitlab/g' | xargs git remote set-url origin"
 
 alias commit="gpgHelper; git commit"
 
-alias flext="sbt \"run transpile\""
-alias flex="sbt \"run repl\""
+#alias j12="export JAVA_HOME=`/usr/libexec/java_home -v 12`"
+alias j11="export JAVA_HOME=`/usr/libexec/java_home -v 11`"
+alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`"
 
-alias j12="export JAVA_HOME=`/usr/libexec/java_home -v 12`; java -version"
-alias j11="export JAVA_HOME=`/usr/libexec/java_home -v 11`; java -version"
-alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"
+alias aws="docker run --rm -it -v ~/.aws:/root/.aws -v $(pwd):/aws amazon/aws-cli"
+
+alias pip3=/usr/bin/pip3
